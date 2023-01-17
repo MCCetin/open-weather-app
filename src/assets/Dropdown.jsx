@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import data from "../city.list.json";
+import MainContext from "../../context/MainContext";
 
 function Dropdown() {
-  const [input, setInput] = useState(745042);
+  const { cityID, setCityID } = useContext(MainContext);
 
   function handleOnChange(e) {
-    setInput(e.target.value);
+    setCityID(e.target.value);
   }
   return (
     <div>
-      <label htmlFor="cities">Choose a city </label>
       <select name="cities" onChange={handleOnChange}>
         {data.map((item) => (
           <option value={item.id} key={item.id}>
@@ -17,7 +17,6 @@ function Dropdown() {
           </option>
         ))}
       </select>
-      {input}
     </div>
   );
 }
