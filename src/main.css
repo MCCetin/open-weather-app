@@ -8,16 +8,14 @@ body {
   background-color: #202124;
 }
 .App {
-    margin-top: 50px;
-  display: flex;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .info {
-  width: 40%;
-  margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-
 }
