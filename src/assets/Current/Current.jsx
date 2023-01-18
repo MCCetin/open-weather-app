@@ -7,7 +7,7 @@ function Current() {
 
   useEffect(() => {
     getCurrent(cityID);
-  }, []);
+  }, [cityID]);   
 
   async function getCurrent(cityID) {
     try {
