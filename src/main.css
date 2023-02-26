@@ -1,11 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
 }
 body {
   height: 100vh;
-  background-color: #202124;
+  /* background: #007991;
+  background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+  background: linear-gradient(to right, #78ffd6, #007991);
+   */
+  background-color: #16394c;
 }
 .App {
   width: 45%;
@@ -13,9 +20,9 @@ body {
   margin-top: 50px;
 }
 
-.info {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
+.main-card {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #28546c;
+  border: 3px solid #396278;
 }
