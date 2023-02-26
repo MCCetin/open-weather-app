@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
-import MainContext from "../../../context/MainContext";
-import "./styles.css";
+import MainContext from "../../context/MainContext";
+import Dropdown from "../Dropdown/Dropdown";
+import styles from "./styles.module.css";
 
 function Current() {
   const { cityID, current, setCurrent, API_KEY } = useContext(MainContext);
@@ -29,17 +30,21 @@ function Current() {
   }
 
   return (
-    <div className="container">
-      <img
-        src={`http://openweathermap.org/img/wn/${current.icon}@2x.png`}
-        alt=""
-      />
-      <div>
-        <span className="degree">{current.temperature}&#176;</span>
-      </div>
-      <div className="current-info">
-        <span>Humidity: {current.humidity}%</span>
-        <span>Wind: {current.wind}km/h</span>
+    <div className={styles.container}>
+      <div className={styles.dropdown}>{current.name}</div>
+      <div className={styles.wrapper}>
+        <div className={styles.info}>
+          <img
+            src={`http://openweathermap.org/img/wn/${current.icon}@2x.png`}
+            alt=""
+          />
+          <span>{current.weather}</span>
+        </div>
+        <span className={styles.degree}>{current.temperature} °C</span>
+        <div className={styles.info}>
+          <span>Humidity: {current.humidity}%</span>
+          <span>Wind: {current.wind}km/h</span>
+        </div>
       </div>
     </div>
   );

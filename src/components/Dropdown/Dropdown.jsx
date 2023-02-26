@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import data from "../city.list.json";
+import data from "../../city.list.json";
 import MainContext from "../../context/MainContext";
 
 function Dropdown() {

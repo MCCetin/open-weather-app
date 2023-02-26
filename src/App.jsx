@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Dropdown from "./assets/Dropdown";
-import MainContext from "../context/MainContext";
-import Current from "./assets/Current/Current";
-import Forecast from "./assets/Forecast/Forecast";
+import Dropdown from "./components/Dropdown/Dropdown";
+import MainContext from "./context/MainContext";
+import Current from "./components/Current/Current";
+import Forecast from "./components/Forecast/Forecast";
 import "./main.css";
 
 const API_KEY = "f641699704974e889946cdddac0996ff";
@@ -25,11 +25,10 @@ function App() {
           setForecast,
         }}
       >
-        <div className="info">
-          <Dropdown />
+        <div className="main-card">
           <Current />
+          <Forecast />
         </div>
-        <Forecast />
       </MainContext.Provider>
     </div>
   );

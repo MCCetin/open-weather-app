@@ -1,12 +1,12 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 function Card({ icon, temperature, day }) {
   return (
-    <div>
-      <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
+    <div className={styles.card}>
       <span>{day}</span>
-      <br />
-      <span>{temperature}</span>
+      <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
+      <span>{temperature} °C</span>
     </div>
   );
 }
