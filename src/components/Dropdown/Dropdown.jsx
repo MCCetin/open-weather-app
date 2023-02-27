@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import data from "../../city.list.json";
 import MainContext from "../../context/MainContext";
+import styles from "./styles.module.css";
 
 function Dropdown() {
-  const { cityID, setCityID } = useContext(MainContext);
+  const { setCityID } = useContext(MainContext);
 
   function handleOnChange(e) {
     setCityID(e.target.value);
   }
   return (
-    <div>
+    <div className={styles.dropdown}>
       <select name="cities" onChange={handleOnChange}>
         {data.map((item) => (
           <option value={item.id} key={item.id}>

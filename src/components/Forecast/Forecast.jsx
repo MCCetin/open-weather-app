@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useId } from "react";
 import MainContext from "../../context/MainContext";
 import Card from "../Card/Card";
 import "./styles.css";
@@ -15,6 +15,7 @@ const days = [
 
 function Forecast() {
   const { cityID, forecast, setForecast, API_KEY } = useContext(MainContext);
+  const id = useId();
 
   useEffect(() => {
     getForecast(cityID);
@@ -27,8 +28,10 @@ function Forecast() {
       );
       const data = await response.json();
       const formattedData = data.list.map((item) => {
+        console.log(item);
         const date = item.dt_txt.split(" ");
         return {
+          id: id + Math.random() * 100,
           day: days[new Date(date[0]).getDay()],
           temperature: Math.round(item.main.temp),
           weather: item.weather[0].main,
@@ -55,7 +58,12 @@ function Forecast() {
   return (
     <div className="forecast">
       {forecast.map((item) => (
-        <Card icon={item.icon} temperature={item.temperature} day={item.day} />
+        <Card
+          icon={item.icon}
+          temperature={item.temperature}
+          day={item.day}
+          key={item.id}
+        />
       ))}
     </div>
   );

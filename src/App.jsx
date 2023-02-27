@@ -25,6 +25,7 @@ function App() {
           setForecast,
         }}
       >
+        <Dropdown />
         <div className="main-card">
           <Current />
           <Forecast />

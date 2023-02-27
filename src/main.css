@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: "Ubuntu", sans-serif;
 }
 body {
@@ -21,6 +20,7 @@ body {
 }
 
 .main-card {
+  color: white;
   padding: 25px;
   border-radius: 10px;
   background-color: #28546c;

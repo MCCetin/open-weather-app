@@ -1,0 +1,12 @@
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+select {
+  padding: 5px 50px 5px 3px;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
+}

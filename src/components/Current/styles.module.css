@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+.title {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid gray;
+}
 
 .wrapper {
   display: flex;
@@ -6,16 +12,23 @@
   justify-content: space-around;
 }
 
-.degree {
-  font-size: 48px;
-  font-family: "Noto Sans", sans-serif;
-  color: white;
-}
-
 .info {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 16px;
   color: #9aa0a6;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.degree {
+  font-size: 48px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  font-size: 28px;
+
 }

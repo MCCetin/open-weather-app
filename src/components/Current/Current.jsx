@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import MainContext from "../../context/MainContext";
-import Dropdown from "../Dropdown/Dropdown";
 import styles from "./styles.module.css";
 
 function Current() {
@@ -31,9 +30,9 @@ function Current() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.dropdown}>{current.name}</div>
+      <div className={styles.title}>{current.name}</div>
       <div className={styles.wrapper}>
-        <div className={styles.info}>
+        <div className={styles.weather}>
           <img
             src={`http://openweathermap.org/img/wn/${current.icon}@2x.png`}
             alt=""
